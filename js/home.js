@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 coinCount -= 20;
                 coinCountElement.textContent = coinCount;
-                alert(`Calling ${serviceName}: ${emergencyNumber}`);
+                alert(`Calling ${serviceName}: ${emergencyNumber}...`);
 
             } else {
 
-                alert('You do not have sufficient coins to call.');
+                alert('❌You do not have sufficient coins: To Call You need at least 20 coin');
             }
         });
     });
