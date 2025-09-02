@@ -159,3 +159,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+/* Copy Count */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const copyButtons = document.querySelectorAll('.btn-copy');
+
+
+    const copyCountElement = document.getElementById('copy-count');
+
+
+    copyButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+
+            let currentCopyCount = parseInt(copyCountElement.textContent);
+            currentCopyCount++;
+            copyCountElement.textContent = currentCopyCount;
+        });
+    });
+});
