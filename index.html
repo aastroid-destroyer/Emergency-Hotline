@@ -30,7 +30,7 @@
                 <img src="assets/coin.png" alt="coin" class="h-5 w-5" />
             </div>
             <div class="flex items-center gap-1 bg-green-500 rounded-full px-4 py-2">
-                <p class="text-white"><span>2</span> Copy</p>
+                <p class="text-white"><span id="copy-count">0</span> Copy</p>
 
             </div>
 
@@ -69,11 +69,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="National Emergency Service" data-number="999">
+                        data-service="National Emergency Service" data-number="999" id="btn-nes">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -98,11 +98,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Police" data-number="999">
+                        data-service="Police" data-number="999" id="btn-police">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -127,24 +127,27 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Fire Service" data-number="999">
+                        data-service="Fire Service" data-number="999" id="btn-fire-service">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
             </div>
             <!-- History Card -->
             <div class="bg-white rounded-xl shadow p-4 row-span-3">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center mb-4">
                     <h1 class="font-bold">
                         <i class="fa-regular fa-clock"></i> Call History
                     </h1>
-                    <button class="btn rounded-full bg-green-600 text-white hover:bg-green-700 p-5">
+                    <button class="btn rounded-full bg-green-600 text-white hover:bg-green-700 p-5" id="btn-clear">
                         Clear
                     </button>
+                </div>
+                <div id="history-container">
+                    
                 </div>
             </div>
             <!-- card 04 -->
@@ -167,11 +170,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Ambulance" data-number="1994-999999">
+                        data-service="Ambulance" data-number="1994-999999" id="btn-ambulance">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -196,11 +199,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Women & Child Support" data-number="109">
+                        data-service="Women & Child Support" data-number="109" id="btn-wcs">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -225,11 +228,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Anti Corruption Commition" data-number="106">
+                        data-service="Anti Corruption Commition" data-number="106" id="btn-acc">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -254,11 +257,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700"
-                        data-service="Electricity Centre" data-number="16216">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
-                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Electricity Centre" data-number="16216" id="btn-electricity">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -283,11 +286,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Brac Centre" data-number="16445">
+                        data-service="Brac Centre" data-number="16445" id="btn-brac">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -312,11 +315,11 @@
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700 btn-copy">
                         Copy
                     </button>
                     <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
-                        data-service="Bangladesh Railway" data-number="163">
+                        data-service="Bangladesh Railway" data-number="163" id="btn-bangladesh-railway">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>

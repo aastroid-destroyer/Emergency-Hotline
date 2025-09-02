@@ -1,3 +1,6 @@
+const historyData = [];
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const heartCountElement = document.getElementById('heart-count');
@@ -42,6 +45,115 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    
+    const historyContainer = document.getElementById('history-container');
+    
+    
+    const btnClear = document.getElementById('btn-clear');
+
+   
+    function addHistoryEntry(serviceName, emergencyNumber) {
+        
+        const currentTime = new Date().toLocaleTimeString([]);
+
+        
+        const newHistoryEntry = document.createElement('div');
+        newHistoryEntry.classList.add('flex', 'justify-between', 'items-center', 'bg-[#f5fff6]', 'p-5', 'rounded-xl'); 
+        
+      
+        newHistoryEntry.innerHTML = `
+            <div>
+                <p class="font-bold">${serviceName}</p>
+                <p>${emergencyNumber}</p>
+            </div>
+            <div>
+                <p>${currentTime}</p>
+            </div>
+        `;
+        
+        
+        historyContainer.appendChild(newHistoryEntry);
+    }
+    const btnNes = document.getElementById('btn-nes');
+    if (btnNes) {
+        btnNes.addEventListener('click', function () {
+            addHistoryEntry('National Emergency Service', '999');
+        });
+    }
+
+
+    const btnFireService = document.getElementById('btn-fire-service');
+    if (btnFireService) {
+        btnFireService.addEventListener('click', function () {
+            addHistoryEntry('Fire Service', '999');
+        });
+    }
+
+    const btnPolice = document.getElementById('btn-police');
+    if (btnPolice) {
+        btnPolice.addEventListener('click', function () {
+            addHistoryEntry('Police', '999');
+        });
+    }
+
+    const btnAmbulance = document.getElementById('btn-ambulance');
+    if (btnAmbulance) {
+        btnAmbulance.addEventListener('click', function () {
+            addHistoryEntry('Ambulance', '1994-999999');
+        });
+    }
+
+    const btnWCS = document.getElementById('btn-wcs');
+    if (btnWCS) {
+        btnWCS.addEventListener('click', function () {
+            addHistoryEntry('Women & Child Support', '109');
+        });
+    }
+
+    const btnACC = document.getElementById('btn-acc');
+    if (btnACC) {
+        btnACC.addEventListener('click', function () {
+            addHistoryEntry('Anti Corruption Commission', '106');
+        });
+    }
+
+    const btnElectricity = document.getElementById('btn-electricity');
+    if (btnElectricity) {
+        btnElectricity.addEventListener('click', function () {
+            addHistoryEntry('Electricity Outage', '16216');
+        });
+    }
+
+    const btnBrac = document.getElementById('btn-brac');
+    if (btnBrac) {
+        btnBrac.addEventListener('click', function () {
+            addHistoryEntry('Brac', '16445');
+        });
+    }
+
+    const btnBangladeshRailway = document.getElementById('btn-bangladesh-railway');
+    if (btnBangladeshRailway) {
+        btnBangladeshRailway.addEventListener('click', function () {
+            addHistoryEntry('Bangladesh Railway', '163');
+        });
+    }
+
+    
+    if (btnClear) {
+        btnClear.addEventListener('click', function () {
+           
+            historyContainer.innerHTML = '';
+        });
+    }
+
+});
+
+
+
 
 
 
