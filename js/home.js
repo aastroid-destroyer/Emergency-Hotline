@@ -1,13 +1,9 @@
-const historyData = [];
 
-
+/* Calling Funtionality */
 document.addEventListener('DOMContentLoaded', function () {
 
     const heartCountElement = document.getElementById('heart-count');
-
-
     const heartIcons = document.getElementsByClassName('heart-icon');
-
 
     for (let i = 0; i < heartIcons.length; i++) {
         heartIcons[i].addEventListener('click', function () {
@@ -16,55 +12,46 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
 
     const callButtons = document.querySelectorAll('.btn-call');
-
-
     const coinCountElement = document.getElementById('coin-count');
-
-    let coinCount = parseInt(coinCountElement.textContent);
 
     callButtons.forEach(function (button) {
         button.addEventListener('click', function () {
-
             const serviceName = button.getAttribute('data-service');
             const emergencyNumber = button.getAttribute('data-number');
-
+            let coinCount = parseInt(document.getElementById('coin-count').textContent);
             if (coinCount >= 20) {
-
                 coinCount -= 20;
                 coinCountElement.textContent = coinCount;
                 alert(`Calling ${serviceName}: ${emergencyNumber}...`);
-
+                addHistoryEntry(serviceName, emergencyNumber);
             } else {
-
-                alert('❌You do not have sufficient coins: To Call You need at least 20 coin');
+                alert('❌ You do not have sufficient coins: To call, you need at least 20 coins');
             }
+
+
         });
     });
+
 });
 
 
+/* History Funtionality */
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    
     const historyContainer = document.getElementById('history-container');
-    
-    
     const btnClear = document.getElementById('btn-clear');
 
-   
     function addHistoryEntry(serviceName, emergencyNumber) {
-        
+
         const currentTime = new Date().toLocaleTimeString([]);
 
-        
         const newHistoryEntry = document.createElement('div');
-        newHistoryEntry.classList.add('flex', 'justify-between', 'items-center', 'bg-[#f5fff6]', 'p-5', 'rounded-xl'); 
-        
-      
+        newHistoryEntry.classList.add('flex', 'justify-between', 'items-center', 'bg-[#f5fff6]', 'p-5', 'rounded-xl', 'mb-3');
+
         newHistoryEntry.innerHTML = `
             <div>
                 <p class="font-bold">${serviceName}</p>
@@ -74,17 +61,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 <p>${currentTime}</p>
             </div>
         `;
-        
-        
+
         historyContainer.appendChild(newHistoryEntry);
     }
+
     const btnNes = document.getElementById('btn-nes');
     if (btnNes) {
         btnNes.addEventListener('click', function () {
             addHistoryEntry('National Emergency Service', '999');
         });
     }
-
 
     const btnFireService = document.getElementById('btn-fire-service');
     if (btnFireService) {
@@ -142,18 +128,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    
     if (btnClear) {
         btnClear.addEventListener('click', function () {
-           
             historyContainer.innerHTML = '';
         });
     }
 
 });
 
+/* Copy Funtionality */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const copyButtons = document.querySelectorAll('.btn-copy');
 
 
+    copyButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+
+            const phoneNumber = button.getAttribute('data-copy');
 
 
+            navigator.clipboard.writeText(phoneNumber).then(function () {
 
+                alert(`The number ${phoneNumber} has been copied to the clipboard!`);
+            }).catch(function (err) {
+
+                alert('Failed to copy the number: ' + err);
+            });
+        });
+    });
+});
