@@ -26,7 +26,7 @@
                 <img src="assets/heart.png" alt="heart" class="h-5 w-5" />
             </div>
             <div class="flex items-center gap-1 bg-[#41ff6b1a] rounded-full px-4 py-2">
-                <span class="font-bold text-black">100</span>
+                <span class="font-bold text-black" id="coin-count">100</span>
                 <img src="assets/coin.png" alt="coin" class="h-5 w-5" />
             </div>
             <div class="flex items-center gap-1 bg-green-500 rounded-full px-4 py-2">
@@ -55,7 +55,7 @@
                     <div class="bg-[#ffe3e2] h-16 w-16 flex items-center justify-center rounded-xl">
                         <img class="h-10 w-10" src="assets/emergency.png" alt="Fire Service">
                     </div>
-                    <button class="text-gray-500 hover:text-red-500 heart-icon" >
+                    <button class="text-gray-500 hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -72,7 +72,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="National Emergency Service" data-number="999">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -87,7 +88,7 @@
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Policer</h2>
+                <h2 class="font-bold text-lg mt-3">Police</h2>
                 <p class="text-gray-500 text-sm">Police</p>
 
                 <div class="text-3xl font-bold mt-2">999</div>
@@ -100,7 +101,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Police" data-number="999">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -128,7 +130,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Fire Service" data-number="999">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -137,11 +140,11 @@
             <div class="bg-white rounded-xl shadow p-4 row-span-3">
                 <div class="flex justify-between items-center">
                     <h1 class="font-bold">
-                    <i class="fa-regular fa-clock"></i> Call History
-                </h1>
-                <button class="btn rounded-full bg-green-600 text-white hover:bg-green-700 p-5">
-                    Clear
-                </button>
+                        <i class="fa-regular fa-clock"></i> Call History
+                    </h1>
+                    <button class="btn rounded-full bg-green-600 text-white hover:bg-green-700 p-5">
+                        Clear
+                    </button>
                 </div>
             </div>
             <!-- card 04 -->
@@ -154,10 +157,10 @@
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Fire Service Number</h2>
-                <p class="text-gray-500 text-sm">Fire Service</p>
+                <h2 class="font-bold text-lg mt-3">Ambulance</h2>
+                <p class="text-gray-500 text-sm">Ambulance</p>
 
-                <div class="text-3xl font-bold mt-2">999</div>
+                <div class="text-3xl font-bold mt-2">1994-999999</div>
 
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mt-1">
                     Fire
@@ -167,7 +170,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Ambulance" data-number="1994-999999">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -176,16 +180,16 @@
             <div class="bg-white p-4 rounded-2xl shadow-lg">
                 <div class="flex items-center justify-between">
                     <div class="bg-[#ffe3e2] h-16 w-16 flex items-center justify-center rounded-xl">
-                        <img class="h-10 w-10" src="assets/fire-service.png" alt="Fire Service">
+                        <img class="h-10 w-10" src="assets/emergency.png" alt="Fire Service">
                     </div>
                     <button class="text-gray-500 hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Fire Service Number</h2>
-                <p class="text-gray-500 text-sm">Fire Service</p>
+                <h2 class="font-bold text-lg mt-3">Women & Child Support</h2>
+                <p class="text-gray-500 text-sm">Women & Child Support</p>
 
-                <div class="text-3xl font-bold mt-2">999</div>
+                <div class="text-3xl font-bold mt-2">109</div>
 
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mt-1">
                     Fire
@@ -195,7 +199,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Women & Child Support" data-number="109">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -204,16 +209,16 @@
             <div class="bg-white p-4 rounded-2xl shadow-lg">
                 <div class="flex items-center justify-between">
                     <div class="bg-[#ffe3e2] h-16 w-16 flex items-center justify-center rounded-xl">
-                        <img class="h-10 w-10" src="assets/fire-service.png" alt="Fire Service">
+                        <img class="h-10 w-10" src="assets/emergency.png" alt="Fire Service">
                     </div>
                     <button class="text-gray-500 hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Fire Service Number</h2>
-                <p class="text-gray-500 text-sm">Fire Service</p>
+                <h2 class="font-bold text-lg mt-3">Anti Corruption Commition</h2>
+                <p class="text-gray-500 text-sm">Anti Corruption Commition</p>
 
-                <div class="text-3xl font-bold mt-2">999</div>
+                <div class="text-3xl font-bold mt-2">106</div>
 
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mt-1">
                     Fire
@@ -223,7 +228,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Anti Corruption Commition" data-number="106">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -232,26 +238,27 @@
             <div class="bg-white p-4 rounded-2xl shadow-lg">
                 <div class="flex items-center justify-between">
                     <div class="bg-[#ffe3e2] h-16 w-16 flex items-center justify-center rounded-xl">
-                        <img class="h-10 w-10" src="assets/fire-service.png" alt="Fire Service">
+                        <img class="h-10 w-10" src="assets/emergency.png" alt="Fire Service">
                     </div>
                     <button class="text-gray-500 hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Fire Service Number</h2>
-                <p class="text-gray-500 text-sm">Fire Service</p>
+                <h2 class="font-bold text-lg mt-3">Electricity Outrage</h2>
+                <p class="text-gray-500 text-sm">Electricity Outrage</p>
 
-                <div class="text-3xl font-bold mt-2">999</div>
+                <div class="text-3xl font-bold mt-2">16216</div>
 
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mt-1">
                     Fire
                 </span>
 
                 <div class="flex items-center gap-2 mt-4">
-                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
+                    <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700"
+                        data-service="Electricity Centre" data-number="16216">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -260,16 +267,16 @@
             <div class="bg-white p-4 rounded-2xl shadow-lg">
                 <div class="flex items-center justify-between">
                     <div class="bg-[#ffe3e2] h-16 w-16 flex items-center justify-center rounded-xl">
-                        <img class="h-10 w-10" src="assets/fire-service.png" alt="Fire Service">
+                        <img class="h-10 w-10" src="assets/brac.png" alt="Fire Service">
                     </div>
                     <button class="text-gray-500 hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Fire Service Number</h2>
-                <p class="text-gray-500 text-sm">Fire Service</p>
+                <h2 class="font-bold text-lg mt-3">Brac</h2>
+                <p class="text-gray-500 text-sm">Brac</p>
 
-                <div class="text-3xl font-bold mt-2">999</div>
+                <div class="text-3xl font-bold mt-2">16445</div>
 
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mt-1">
                     Fire
@@ -279,7 +286,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Brac Centre" data-number="16445">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
@@ -288,16 +296,16 @@
             <div class="bg-white p-4 rounded-2xl shadow-lg">
                 <div class="flex items-center justify-between">
                     <div class="bg-[#ffe3e2] h-16 w-16 flex items-center justify-center rounded-xl">
-                        <img class="h-10 w-10" src="assets/fire-service.png" alt="Fire Service">
+                        <img class="h-10 w-10" src="assets/Bangladesh-Railway.png" alt="Fire Service">
                     </div>
                     <button class="text-gray-500 hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                <h2 class="font-bold text-lg mt-3">Fire Service Number</h2>
-                <p class="text-gray-500 text-sm">Fire Service</p>
+                <h2 class="font-bold text-lg mt-3">Bangladesh Railway</h2>
+                <p class="text-gray-500 text-sm">Bangladesh Railway</p>
 
-                <div class="text-3xl font-bold mt-2">999</div>
+                <div class="text-3xl font-bold mt-2">163</div>
 
                 <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full mt-1">
                     Fire
@@ -307,7 +315,8 @@
                     <button class="flex-1 btn rounded-full border border-gray-300 bg-white text-gray-700">
                         Copy
                     </button>
-                    <button class="flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700">
+                    <button class="btn-call flex-1 btn rounded-full bg-green-600 text-white hover:bg-green-700"
+                        data-service="Bangladesh Railway" data-number="163">
                         <i class="fa-solid fa-phone mr-1"></i> Call
                     </button>
                 </div>
